@@ -20,11 +20,13 @@ class EncodeSpacesFunction : TemplateFunction("encodeSpaces", true) {
         return arrayOf("input")
     }
 
-    override fun apply(context: OrchidContext, page: OrchidPage?): Any? {
+    override fun apply(context: OrchidContext, page: OrchidPage?): String {
         return context
             .resolve<StringConverter>()
             .convert(String::class.java, input)
             .second
             .encodeSpaces()
     }
+
+    private fun String.printBytes() : String = this.toByteArray().joinToString { "${it.toInt()}" }
 }

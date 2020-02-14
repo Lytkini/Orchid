@@ -7,10 +7,12 @@ import com.eden.orchid.testhelpers.OrchidIntegrationTest
 import com.eden.orchid.testhelpers.withGenerator
 import com.eden.orchid.writersblocks.WritersBlocksModule
 import kotlinx.html.p
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 
+@Disabled
 class PluralizeTagTest : OrchidIntegrationTest(
     withGenerator<HomepageGenerator>(),
     WritersBlocksModule()

@@ -8,10 +8,12 @@ import com.eden.orchid.testhelpers.withGenerator
 import com.eden.orchid.writersblocks.WritersBlocksModule
 import kotlinx.html.div
 import kotlinx.html.iframe
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import strikt.api.expectThat
 
+@Disabled
 class SpotifyTagTest : OrchidIntegrationTest(
     withGenerator<HomepageGenerator>(),
     WritersBlocksModule()

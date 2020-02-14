@@ -43,6 +43,9 @@ fun Assertion.Builder<String>.asHtml(
             })
         }
 
+        println("asHtml original        = [$this]")
+        println("asHtml doc.outerHtml() = [${doc.outerHtml()}]") // yes
+
         if (removeComments) {
             doc.filter(CommentFilter)
         }
